@@ -145,6 +145,10 @@
     animation-range: entry 0% cover 15%;
 }
 
+.brand1:has(img:hover) {
+    animation: color-brand1 1s ease-in-out forwards;
+}
+
 .brand2 {
     position: relative;
     background-color: rgb(171, 171, 171);
@@ -246,7 +250,15 @@
     font-weight: 600;
 }
 
+@keyframes color-brand1 {
+    from {
+        background-color: white;
+    }
 
+    to {
+        background-color: rgb(181, 138, 110);
+    }
+}
 
 @keyframes color1 {
     from {
