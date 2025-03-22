@@ -1,5 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    overflow-x: hidden;
+}
+
 * {
+    font-family: "Poppins", sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
-    background-color: black;
+    padding: 10px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+    animation: nav-color-change linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 5%;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+}
+
+.nav-link {
+    margin-left: 8vw;
+}
+
+.heading h1 {
+    position: relative;
+
+}
+
+.heading h1::after {
+    content: "Selected Works";
+    position: absolute;
+    bottom: -80%;
+    left: 0;
+    width: max-content;
+    font-size: 1vw;
+}
+
+.nav-right h3 {
+    transform: translateX(-25vw);
+    padding-left: 10vw;
+    position: relative;
+}
+
+.nav-right h3::after {
+    content: "View all works";
+    position: absolute;
+    bottom: -500%;
+    right: -70%;
+    width: max-content;
+    font-size: 1vw;
+}
+
+.sun img {
+    position: fixed;
+    top: 76.5%;
+    left: -2%;
+    width: 20vw;
+    z-index: 999;
+}
+
+.center-page {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+
+}
+
+.brand1 p {
+    z-index: 1000;
+    top: 7.5%;
+    right: 20%;
+    width: 24vw;
+    text-align: start;
+    position: absolute;
+    font-weight: 500;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10vw;
+    padding-top: 3vw;
+    width: 100vw;
+    margin: 0;
+    height: 100vh;
+}
+
+.brand:last-child {
+    padding-bottom: 0;
+}
+
+.video {
+    position: absolute;
+    top: 35%;
+}
+
+.video video {
+    width: 25vw;
+    height: 15vw;
+}
+
+.brand h4 {
+    transform: translateX(-3vw);
+    text-align: end;
+    font-size: 1.5vw;
+    font-weight: 500;
+    width: 50vw;
+}
+
+.brand1 {
+    position: relative;
+    padding-top: 5vw;
+    background-color: white;
+}
+
+.brand2 {
+    position: relative;
+    animation: colorChange1 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 30% cover 32%;
+    background-color: rgb(171, 171, 171);
+}
+
+.brand3 {
+    position: relative;
+    background-color: rgb(34, 134, 29);
+    animation: colorChange2 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 30% cover 60%;
+}
+
+.brand4 {
+    position: relative;
+    animation: colorChange3 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 100%;
+    background-color: rgb(255, 89, 89);
+}
+
+.brand5 {
+    position: relative;
+    animation: colorChange3 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 100%;
+    background-color: rgb(137, 98, 32);
+}
+
+.brand6 {
+    position: relative;
+    animation: colorChange3 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 100%;
+    background-color: rgb(255, 185, 64);
+}
+
+.brand7 {
+    position: relative;
+    animation: colorChange3 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 100%;
+    background-color: rgb(198, 49, 57);
+    padding-bottom: 0;
+}
+
+
+.brand img {
+    width: 50vw;
+    position: relative;
+
+    &:hover {
+        scale: 1.02;
+        transition: scale 0.2s ease-in-out;
+    }
+}
+
+.brand7 img {
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+}
+
+.footer {
+    padding-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    background-color: rgb(198, 49, 57);
+    height: 50vh;
+}
+
+.footer-heading p{
+    width: 45vw;
+    font-size: 1.5vw;
+}
+
+.footer-heading{
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.number{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4vw;
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+/* @keyframes colorChange1 {
+    from {
+        background-color: rgb(55, 168, 55);
+    }
+
+    to {
+        background-color: rgb(255, 92, 119);
+    }
+}
+
+@keyframes colorChange2 {
+    from {
+        background-color: rgb(255, 92, 119);
+    }
+
+    to {
+        background-color: rgb(181, 138, 138);
+    }
+}
+
+@keyframes colorChange3 {
+    from {
+        background-color: rgb(181, 138, 138);
+    }
+
+    to {
+        background-color: rgb(138, 254, 138);
+    }
+} */
+
+@keyframes nav-color-change {
+    from {
+        background-color: white
+    }
+
+    to {
+        background-color: transparent;
+    }
 }
