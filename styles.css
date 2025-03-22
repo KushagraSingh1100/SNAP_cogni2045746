@@ -140,57 +140,59 @@
     position: relative;
     padding-top: 5vw;
     background-color: white;
+    animation: color1 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 15%;
 }
 
 .brand2 {
     position: relative;
-    animation: colorChange1 linear both;
-    animation-timeline: scroll();
-    animation-range: entry 30% cover 32%;
     background-color: rgb(171, 171, 171);
+    animation: color2 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 15% cover 30%;
 }
 
 .brand3 {
     position: relative;
     background-color: rgb(34, 134, 29);
-    animation: colorChange2 linear both;
+    animation: color3 linear both;
     animation-timeline: scroll();
-    animation-range: entry 30% cover 60%;
+    animation-range: entry 30% cover 45%;
 }
 
 .brand4 {
     position: relative;
-    animation: colorChange3 linear both;
-    animation-timeline: scroll();
-    animation-range: entry 0% cover 100%;
     background-color: rgb(255, 89, 89);
+    animation: color4 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 45% cover 60%;
 }
 
 .brand5 {
     position: relative;
-    animation: colorChange3 linear both;
-    animation-timeline: scroll();
-    animation-range: entry 0% cover 100%;
     background-color: rgb(137, 98, 32);
+    animation: color5 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 60% cover 75%;
 }
 
 .brand6 {
     position: relative;
-    animation: colorChange3 linear both;
-    animation-timeline: scroll();
-    animation-range: entry 0% cover 100%;
     background-color: rgb(255, 185, 64);
+    animation: color6 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 75% cover 90%;
 }
 
 .brand7 {
     position: relative;
-    animation: colorChange3 linear both;
-    animation-timeline: scroll();
-    animation-range: entry 0% cover 100%;
     background-color: rgb(198, 49, 57);
+    animation: color7 linear both;
+    animation-timeline: scroll();
+    animation-range: entry 90% cover 100%;
     padding-bottom: 0;
 }
-
 
 .brand img {
     width: 50vw;
@@ -221,12 +223,12 @@
     height: 50vh;
 }
 
-.footer-heading p{
+.footer-heading p {
     width: 45vw;
     font-size: 1.5vw;
 }
 
-.footer-heading{
+.footer-heading {
     width: 90vw;
     display: flex;
     justify-content: space-between;
@@ -234,45 +236,87 @@
     font-weight: 500;
 }
 
-.number{
+.number {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 4vw;
+    padding-top: 5vw;
     font-size: 2vw;
     font-weight: 600;
 }
 
-/* @keyframes colorChange1 {
+
+
+@keyframes color1 {
     from {
-        background-color: rgb(55, 168, 55);
+        background-color: white;
     }
 
     to {
-        background-color: rgb(255, 92, 119);
+        background-color: rgb(171, 171, 171);
     }
 }
 
-@keyframes colorChange2 {
+@keyframes color2 {
     from {
-        background-color: rgb(255, 92, 119);
+        background-color: rgb(171, 171, 171);
     }
 
     to {
-        background-color: rgb(181, 138, 138);
+        background-color: rgb(34, 134, 29);
     }
 }
 
-@keyframes colorChange3 {
+@keyframes color3 {
     from {
-        background-color: rgb(181, 138, 138);
+        background-color: rgb(34, 134, 29);
     }
 
     to {
-        background-color: rgb(138, 254, 138);
+        background-color: rgb(255, 89, 89);
     }
-} */
+}
+
+@keyframes color4 {
+    from {
+        background-color: rgb(255, 89, 89);
+    }
+
+    to {
+        background-color: rgb(137, 98, 32);
+    }
+}
+
+@keyframes color5 {
+    from {
+        background-color: rgb(137, 98, 32);
+    }
+
+    to {
+        background-color: rgb(255, 185, 64);
+    }
+}
+
+@keyframes color6 {
+    from {
+        background-color: rgb(255, 185, 64);
+    }
+
+    to {
+        background-color: rgb(198, 49, 57);
+    }
+}
+
+@keyframes color7 {
+    from {
+        background-color: rgb(198, 49, 57);
+    }
+
+    to {
+        background-color: rgb(198, 49, 57);
+    }
+}
 
 @keyframes nav-color-change {
     from {
