@@ -261,11 +261,15 @@
 }
 
 @keyframes color1 {
-    from {
+    0% {
         background-color: white;
     }
 
-    to {
+    50% {
+        background-color: rgb(181, 138, 110);
+    }
+
+    100% {
         background-color: rgb(171, 171, 171);
     }
 }
